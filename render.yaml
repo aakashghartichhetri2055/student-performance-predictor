@@ -3,7 +3,7 @@ services:
     name: student-performance-predictor
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn predictor_web.wsgi:application"
+    startCommand: "gunicorn student-performance-predictor.predictor_web.wsgi:application"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: predictor_web.settings
